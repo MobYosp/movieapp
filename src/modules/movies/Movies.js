@@ -151,12 +151,12 @@ class Movies extends Component {
 				</Swiper>
 				<View>
 					<View style={styles.listHeading}>
-						<Text style={styles.listHeadingLeft}>Popular</Text>
+						<Text style={styles.listHeadingLeft}>Populares</Text>
 						<TouchableOpacity>
 							<Text
 								style={styles.listHeadingRight}
 								onPress={this._viewMoviesList.bind(this, 'popular', 'Popular')}>
-								See all
+								Ver todas
 							</Text>
 						</TouchableOpacity>
 					</View>
@@ -172,7 +172,7 @@ class Movies extends Component {
 								<Text
 									style={styles.browseListItemText}
 									onPress={this._viewMoviesList.bind(this, 'now_playing', 'Now Playing')}>
-									Now Playing
+									Reproduciendo
 								</Text>
 							</View>
 						</TouchableOpacity>
@@ -180,7 +180,7 @@ class Movies extends Component {
 							<View style={styles.browseListItem}>
 								{iconTop}
 								<Text style={styles.browseListItemText} onPress={this._viewMoviesList.bind(this, 'top_rated', 'Top Rated')}>
-									Top Rated
+									Mejor Clasificadas
 								</Text>
 							</View>
 						</TouchableOpacity>
@@ -190,7 +190,7 @@ class Movies extends Component {
 								<Text
 									style={styles.browseListItemText}
 									onPress={this._viewMoviesList.bind(this, 'upcoming', 'Upcoming')}>
-									Upcoming
+									Por Venir
 								</Text>
 							</View>
 						</TouchableOpacity>

@@ -25,15 +25,15 @@ const Info = ({ info }) => {
 				</Text>
 			</View>
 			<View style={styles.labelRow}>
-				<Text style={styles.label}>Release Date</Text>
+				<Text style={styles.label}>Fecha de Lanzamiento</Text>
 				<Text style={styles.value}>{releaseDate}</Text>
 			</View>
 			<View style={styles.labelRow}>
-				<Text style={styles.label}>Directed By</Text>
+				<Text style={styles.label}>Dirigida Por</Text>
 				<Text style={styles.value}>{director[0].name}</Text>
 			</View>
 			<View style={styles.labelRow}>
-				<Text style={styles.label}>Budget</Text>
+				<Text style={styles.label}>Presupuesto</Text>
 				<Text style={styles.value}>{budget}</Text>
 			</View>
 		</View>

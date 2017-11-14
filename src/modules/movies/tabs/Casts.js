@@ -9,11 +9,11 @@ import styles from './styles/Casts';
 import { TMDB_IMG_URL } from '../../../constants/api';
 
 const Casts = ({ info, getTabHeight }) => {
-	let computedHeight = (80 + 15) * info.casts.cast.length; // (castImage.height + castContainer.marginBottom)
+	let computedHeight = (80 + 15) * 15;  // info.casts.cast.length; (castImage.height + castContainer.marginBottom)
 	computedHeight += 447 + 40; // Header height + container ((20 paddingVertical) = 40)
 
 	return (
-		<View style={styles.container} onLayout={getTabHeight.bind(this, 'casts', computedHeight)}>
+		<View style={styles.container} onLayout={getTabHeight}>
 			{
 				info.casts.cast.map(item => (
 					<View key={item.cast_id} style={styles.castContainer}>
@@ -23,7 +23,7 @@ const Casts = ({ info, getTabHeight }) => {
 								{item.name}
 							</Text>
 							<Text style={styles.asCharacter}>
-								{item.character && `as ${item.character}`}
+								{`Como ${item.character}`}
 							</Text>
 						</View>
 					</View>

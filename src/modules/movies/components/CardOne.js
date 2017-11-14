@@ -23,13 +23,10 @@ const CardOne = ({ info, viewMovie }) => (
 				<Text style={styles.cardTitle} numberOfLines={2}>
 					{info.original_title}
 				</Text>
-				<View style={styles.cardGenre}>
-					<Text style={styles.cardGenreItem}>Action</Text>
-				</View>
 				<View style={styles.cardNumbers}>
 					<View style={styles.cardStar}>
 						{iconStar}
-						<Text style={styles.cardStarRatings}>8.9</Text>
+						<Text style={styles.cardStarRatings}>{info.vote_average.toFixed(1)}</Text>
 					</View>
 					<Text style={styles.cardRunningHours} />
 				</View>
@@ -38,7 +35,7 @@ const CardOne = ({ info, viewMovie }) => (
 				</Text>
 				<TouchableOpacity activeOpacity={0.9} onPress={viewMovie.bind(this, info.id)}>
 					<View style={styles.viewButton}>
-						<Text style={styles.viewButtonText}>View Details</Text>
+						<Text style={styles.viewButtonText}>Ver Detalles</Text>
 					</View>
 				</TouchableOpacity>
 			</View>
