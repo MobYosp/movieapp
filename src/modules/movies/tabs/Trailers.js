@@ -11,11 +11,11 @@ import styles from './styles/Trailers';
 
 const Trailers = ({ getTabHeight, youtubeVideos, openYoutube }) => {
 	const trailers = _.take(youtubeVideos, 10);
-	let computedHeight = (90 + 10) * youtubeVideos.length; // (thumbnail.height + thumbnailContainer.marginBottom)
-	computedHeight += 447 + 40; // Header height + container ((20 paddingVertical) = 40)
-
+	// let computedHeight = (90 + 10) * youtubeVideos.length; // (thumbnail.height + thumbnailContainer.marginBottom)
+	// computedHeight += 447 + 40; // Header height + container ((20 paddingVertical) = 40)
+	// onLayout={getTabHeight.bind(this, 'trailers', computedHeight)}
 	return (
-		<View style={styles.container} onLayout={getTabHeight.bind(this, 'trailers', computedHeight)}>
+		<View style={styles.container} >
 			{
 				trailers.map((item, index) => (
 					<TouchableOpacity key={index} onPress={openYoutube.bind(this, `http://youtube.com/watch?v=${item.id}`)}>

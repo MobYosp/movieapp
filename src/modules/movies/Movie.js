@@ -210,7 +210,7 @@ class Movie extends Component {
 							<View style={styles.cardNumbers}>
 								<View style={styles.cardStar}>
 									{iconStar}
-									<Text style={styles.cardStarRatings}>8.9</Text>
+									<Text style={styles.cardStarRatings}>{info.vote_average.toFixed(1)}</Text>
 								</View>
 								<Text style={styles.cardRunningHours} />
 							</View>
