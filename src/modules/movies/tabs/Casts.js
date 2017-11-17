@@ -8,12 +8,12 @@ import {
 import styles from './styles/Casts';
 import { TMDB_IMG_URL } from '../../../constants/api';
 
-const Casts = ({ info, getTabHeight }) => {
-	let computedHeight = (80 + 15) * 15;  // info.casts.cast.length; (castImage.height + castContainer.marginBottom)
-	computedHeight += 447 + 40; // Header height + container ((20 paddingVertical) = 40)
+const Casts = ({ info }) => {
+	// let computedHeight = (80 + 15) * 15;  // info.casts.cast.length; (castImage.height + castContainer.marginBottom)
+	// computedHeight += 447 + 40; // Header height + container ((20 paddingVertical) = 40)
 
 	return (
-		<View style={styles.container} onLayout={getTabHeight}>
+		<View style={styles.container}>
 			{
 				info.casts.cast.map(item => (
 					<View key={item.cast_id} style={styles.castContainer}>
@@ -34,8 +34,7 @@ const Casts = ({ info, getTabHeight }) => {
 };
 
 Casts.propTypes = {
-	info: PropTypes.object.isRequired,
-	getTabHeight: PropTypes.func.isRequired
+	info: PropTypes.object.isRequired
 };
 
 export default Casts;

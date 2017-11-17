@@ -98,12 +98,13 @@ class Movie extends Component {
 
 	// ScrollView onContentSizeChange prop
 	_onContentSizeChange(width, height) {
-		if (this.state.tab === 0 && this.state.infoTabHeight === this.state.castsTabHeight) {
-			this.setState({ infoTabHeight: height });
-		}
+		// if (this.state.tab === 0 && this.state.infoTabHeight === this.state.castsTabHeight) {
+		// 	this.setState({ infoTabHeight: 800 });
+		// }
 	}
 
 	_getTabHeight(tabName, height) {
+		if (tabName === 'info') this.setState({ infoTabHeight: height });
 		if (tabName === 'casts') this.setState({ castsTabHeight: height });
 		if (tabName === 'trailers') this.setState({ trailersTabHeight: height });
 	}
@@ -227,8 +228,8 @@ class Movie extends Component {
 								/>
 							)}>
 							<Info tabLabel="INFO" info={info} />
-							<Casts tabLabel="CASTS" info={info} getTabHeight={this._getTabHeight} />
-							<Trailers tabLabel="TRAILERS" youtubeVideos={this.state.youtubeVideos} openYoutube={this._openYoutube} getTabHeight={this._getTabHeight} />
+							<Casts tabLabel="CASTS" info={info} />
+							<Trailers tabLabel="TRAILERS" youtubeVideos={this.state.youtubeVideos} openYoutube={this._openYoutube} />
 						</ScrollableTabView>
 					</View>
 				</View>

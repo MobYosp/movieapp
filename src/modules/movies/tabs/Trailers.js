@@ -9,7 +9,7 @@ import _ from 'lodash';
 
 import styles from './styles/Trailers';
 
-const Trailers = ({ getTabHeight, youtubeVideos, openYoutube }) => {
+const Trailers = ({ youtubeVideos, openYoutube }) => {
 	const trailers = _.take(youtubeVideos, 10);
 	// let computedHeight = (90 + 10) * youtubeVideos.length; // (thumbnail.height + thumbnailContainer.marginBottom)
 	// computedHeight += 447 + 40; // Header height + container ((20 paddingVertical) = 40)
@@ -31,7 +31,6 @@ const Trailers = ({ getTabHeight, youtubeVideos, openYoutube }) => {
 };
 
 Trailers.propTypes = {
-	getTabHeight: PropTypes.func.isRequired,
 	openYoutube: PropTypes.func,
 	youtubeVideos: PropTypes.array
 };
